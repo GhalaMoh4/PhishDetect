@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="static/logo.jpg" type="image/x-icon">
+    <div class="list-container">
+    <ul class="list">
+<li><a href = "#home"> Home</a></li>
+ <li><a href = "#About">About</a></li> 
+
+
+
+</ul>
+</div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhishDetect</title>
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+    
+</head>
+<body>
+    <div class="big-container">
+    <div id="home">
+        <img src="static/name.jpg">
+    <!-- <h1>PhishDetect</h1> -->
+    <!-- <img src="static/email.png" class="email"> -->
+    <textarea id="inputTextArea" rows="4" placeholder="Write your email content here.."></textarea>
+    <button onclick="analyze()" >Analyze</button>
+    <div class="labels-container">
+    <label id="dotCount">Number of Dots: 0</label>
+    <label id="subdomainLevel">Subdomain Level: 0</label>
+    <label id="urlLength">URL Length: 0</label>
+    <label id="dashCount">Number of Dashes: 0</label>
+    <label id="atSymbolCount">Number of @ symbols: 0</label>
+    <label id="tildeCount">Number of Tilde Symbols: 0</label>
+    <label id="underscoreCount">Number of Underscores: 0</label>
+    <label id="percentCount">Number of Percent Signs: 0</label>
+    <label id="ampersandCount">Number of Ampersands: 0</label>
+    <label id="hashCount">Number of Hashes: 0</label>
+    <label id="numericCharCount">Number of Numeric Characters: 0</label>
+    <label id="hasHttps">Contains HTTPS:</label>
+    <label id="sensitiveWordCount">Number of Sensitive Words: 0</label>
+    <label id="hasRandomString">Contains Random Strings: 0</label>
+    <label id="hasExternalLinks">Contains External Links: 0</label>
+    <label id="hasInsecureForms">Contains Insecure Forms: 0</label>
+    <label id="hasAbnormalFormAction">Contains Abnormal Form Actions: 0</label>
+    <label id="hasMissingTitle">Contains Missing Title: 0</label>
+    </div>
+    <form action="/result" method="POST">
+        <input type="hidden" name="n1" id="dotCountValue">
+        <input type="hidden" name="n2" id="subdomainLevelValue">
+        <input type="hidden" name="n3" id="urlLengthValue">
+        <input type="hidden" name="n4" id="dashCountValue">
+        <input type="hidden" name="n5" id="atSymbolCountValue">
+        <input type="hidden" name="n6" id="tildeCountValue">
+        <input type="hidden" name="n7" id="underscoreCountValue">
+        <input type="hidden" name="n8" id="percentCountValue">
+        <input type="hidden" name="n9" id="ampersandCountValue">
+        <input type="hidden" name="n10" id="hashCountValue">
+        <input type="hidden" name="n11" id="numericCharCountValue">
+        <input type="hidden" name="n12" id="hasHttpsValue">
+        <input type="hidden" name="n13" id="sensitiveWordCountValue">
+        <input type="hidden" name="n14" id="hasRandomStringValue">
+        <input type="hidden" name="n15" id="hasExternalLinksValue">
+        <input type="hidden" name="n16" id="hasInsecureFormsValue">
+        <input type="hidden" name="n17" id="hasAbnormalFormActionValue">
+        <input type="hidden" name="n18" id="hasMissingTitleValue">
+        
+        <div class="row">
+            <button type="submit">PREDICT</button>
+        </div>
+    </form>
+    <div class="row">
+        <h2 class="{{ result }}">{{ result }}</h2>
+    </div>
+
+</div>
+<div id="About">
+<div class="card">
+
+    <div class="front">
+        <h2 class="front-title">About PhishDetect</h2>
+        <p class="front-text">
+             
+             PhishDetect is a machine learning-based tool that detects email phishing attempts using 
+             the Support Vector Machine (SVM) algorithm. The project aims to improve email security and
+              prevent phishing attacks, which can lead to data breaches and financial losses.
+              Developed by [Ghala,Taif,Ghaida,Leen] from King Khalid University, Department of Computer Science.  </p>
+        <button class="front-btn">View</button>
+    </div>
+
+    <div class="back">
+        <h2 class="back-title">About PhishDetect</h2>
+        <p class="back-text">we used a dataset of real-world phishing
+             emails to train an SVM algorithm to detect phishing attempts with high accuracy.
+              We also experimented with different  hyperparameter and feature engineering to optimize the model's performance.
+              PhishDetect is an important tool for anyone looking to enhance their email
+               security and protect themselves from phishing attacks. </p>
+        <button class="back-btn">View</button>
+    </div>
+
+</div>
+</div>
+</div>
+    <script src="static/main.js">
+     </script>
+     <footer>
+    <div class=”footer-content”>
+        <p> Developed by : Ghala   Taif   Leen   Ghaida  </p>
+    </div>
+</footer>
+</body>
+
+</html>
